@@ -1,0 +1,326 @@
+ /* Add the backdrop-filter property to the .landingPage class */
+ /* Add the filter property to the .landingPage class */
+ /* Add a ::before pseudo-element to create an overlay with the blur effect */
+.landingPage::before {
+    content: "";
+    background-image: url('./landingpageimg/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(5px); 
+    z-index: -1;  
+    opacity: 0.7; 
+}
+
+ 
+  .landing-content {
+    text-align: center;
+    padding: 100px 0;
+    
+  }
+
+  .landing-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+   
+    color: #007BFF; /* Blue */
+  }
+
+  .landing-subtitle {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-top: 20px;
+  }
+   .centerheding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10rem;
+}
+.landingPage {
+  margin-bottom: 20px; /* Adjust the space as needed */
+}
+
+/* CSS for service cards */
+.servies{
+ margin-top: 185px
+}
+.service-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  background-color: #f0f0f0; /* Change the background color on hover */
+}
+ 
+
+.landing-title {
+  font-size: 2.5rem;
+}
+
+.landing-subtitle {
+  font-size: 1.5rem;
+}
+
+.service-card {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.service-card:hover {
+  background-color: #f8f9fa; /* Change the background color on hover */
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.service-card p {
+  color: #333;
+  font-size: 1rem;
+}
+ 
+.service-card {
+  opacity: 0;
+  transform: translateY(30px); /* Start with cards below the container */
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move cards to their original position */
+}
+
+@keyframes sandAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px); /* Simulate rising like sand */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.sand {
+  animation: sandAnimation 1s infinite; /* Apply the sand animation */
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Use your desired font family */
+  background-color: #f5f5f5; /* Background color for the entire page */
+}
+
+.knowledge {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.containermain {
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  background-color: #fff; /* Background color for the content container */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  width: 45%; /* Adjust the width as needed */
+  height: auto;
+  border-radius: 5px;
+}
+
+.text {
+  width: 45%; /* Adjust the width as needed */
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  color: #007bff; /* Blue color for the heading */
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #555; /* Text color for the list items */
+}
+
+/* Icon styling */
+i {
+  margin-right: 5px;
+  color: #28a745; /* Green color for the checkmark icons */
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 766px) {
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    /* display: none; */
+    position: absolute;
+    top: 22px;
+    right: 192px;
+    /* margin: auto; */
+}
+.text {
+  width: auto;
+  padding: 20px;
+  color: #333;
+  top: 22px;
+  margin-top: 232px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+  /* You can adjust the styles further for smaller screens if needed */
+ 
+}
+@media (max-width: 251px) {
+  .img-fluid {
+    width: 178px;
+    max-width: 100%;
+    height: 200px;
+    /* display: none; */
+    position: absolute;
+    top: 22px;
+    right: 31px;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 10px;
+}
+li {
+  width: 9rem;
+  margin: 10px 0;
+  font-size: 10px;
+  color: #555;
+}
+h1 {
+  color: #007bff;
+  font-size: 14.1px;
+}
+.landing-subtitle {
+  font-size: 15.5px;
+}
+.landing-title {
+  font-size: 1.5rem;
+}
+
+}
+@media (max-width: 199px) {
+  .service-card h3 {
+    font-size: 14px;
+    color: #007bff;
+}
+.service-card p {
+  color: #333;
+  font-size: 10px;
+}
+.img-fluid {
+  width: 149px;
+  max-width: 100%;
+  height: 175px;
+  /* display: none; */
+  position: absolute;
+  top: 22px;
+  right: 25px;
+  /* margin: auto; */
+  display: flex;
+  align-items: center;
+}
+
+}
+@media (max-width: 290px) {
+ 
+  .img-fluid {
+    width: 71%;
+    max-width: 100%;
+    height: 188px;
+    /* display: none; */
+    position: absolute;
+    top: 22px;
+    right: 43px;
+    margin: auto;
+}
+h1 {
+  color: #007bff;
+  font-size: 14px;
+}
+li {
+  margin: 10px 0;
+  font-size: 10px;
+  color: #555;
+}
+.landing-title {
+  font-size: 1.5rem;
+  padding: 11px;
+}
+.landing-subtitle {
+  font-size: 14px;
+}
+
+}
+
+ 
